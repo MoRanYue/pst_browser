@@ -6,11 +6,14 @@ import { watch } from 'vue'
 const settings = useSettingsStore()
 const i18n = useI18n()
 
-watch(settings, (settings) => {
+function autoSetLanguage() {
   if (i18n.availableLocales.includes(settings.locale)) {
     i18n.locale.value = settings.locale
+    document.getElementsByTagName('html')[0].lang = settings.locale
   }
-})
+}
+autoSetLanguage()
+watch(settings, autoSetLanguage)
 </script>
 
 <template>

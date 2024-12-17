@@ -1,7 +1,7 @@
 {
   "name": "pst_browser",
   "author": "MoRanYue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "repository": {
@@ -18,7 +18,6 @@
   "dependencies": {
     "@icon-park/vue-next": "^1.4.2",
     "@vueuse/core": "^12.0.0",
-    "@vueuse/head": "^2.0.0",
     "@vueuse/motion": "^2.2.6",
     "less": "^4.2.1",
     "less-loader": "^12.2.0",
