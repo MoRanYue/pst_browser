@@ -106,13 +106,13 @@ async function processParsedStats(stats) {
     if (Object.prototype.hasOwnProperty.call(stats.players, slot)) {
       const player = stats.players[slot]
 
-      let plantuml = `@startuml\ntitle ${i18n.t('graph_title.infection_event_relationships')}\nactor ${player.name} as player\n`
+      let plantuml = `@startuml\ntitle "${i18n.t('graph_title.infection_event_relationships')}"\nactor "${player.name}" as player\n`
       for (const name in player.infected) {
         if (Object.prototype.hasOwnProperty.call(player.infected, name)) {
           const infection = player.infected[name]
 
           const infected_name = i18n.t('stats.' + name)
-          plantuml += `entity ${infected_name} as ${name}\ngroup ${infected_name}\n`
+          plantuml += `entity "${infected_name}" as ${name}\ngroup ${infected_name}\n`
           for (const k in infection) {
             if (Object.prototype.hasOwnProperty.call(infection, k)) {
               const v = infection[k]
