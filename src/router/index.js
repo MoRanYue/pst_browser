@@ -4,8 +4,8 @@ import ViewerView from '@/views/ViewerView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', name: 'Root', redirect: '/viewer' },
-    { path: '/viewer', name: 'Viewer', component: ViewerView },
+    { path: '/', name: 'Root', component: ViewerView },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/' },
   ],
   scrollBehavior(to, from, savedPosition) {
     // 始终滚动到顶部
