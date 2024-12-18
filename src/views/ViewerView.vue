@@ -326,6 +326,7 @@ header {
 
 main {
   text-align: center;
+  width: 100%;
 
   @media screen and (min-width: 1024px) {
     width: 1024px;
